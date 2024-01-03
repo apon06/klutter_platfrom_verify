@@ -1,39 +1,66 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Use Eazy This Package
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
+Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:klutter_platfrom_verify/klutter_platfrom_verify.dart';
+import 'pages/android.dart';
+import 'pages/fuchsia.dart';
+import 'pages/ios.dart';
+import 'pages/linux.dart';
+import 'pages/macOs.dart';
+import 'pages/web.dart';
+import 'pages/windows.dart';
+
+void main() {
+  runApp(
+    const MaterialApp(
+      home: MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    if (isAndroid()) {
+      return const AndroidPage();
+    }
+    if (isIOS()) {
+      return const IosPage();
+    }
+    if (isWeb()) {
+      return const WebPage();
+    }
+    if (isWindows()) {
+      return const WindowsPage();
+    }
+    if (isLinux()) {
+      return const LinuxPage();
+    }
+    if (isMacOS()) {
+      return const MacosPage();
+    }
+    if (isFuchsia()) {
+      return const FuchsiaPage();
+    }
+
+    return const SizedBox.expand();
+  }
+}
+
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+The Package Help Life Eazy
