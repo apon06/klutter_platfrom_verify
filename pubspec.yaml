@@ -1,6 +1,6 @@
 name: klutter_platfrom_verify
 description: This Package Make Eazy To Use Platfrom verify
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/apon06/klutter_platfrom_verify
 
 environment:

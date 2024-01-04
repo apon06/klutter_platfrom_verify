@@ -26,6 +26,31 @@ bool isMacOS() {
 bool isLinux() {
   return isWeb() ? false : Platform.isLinux;
 }
+
 bool isFuchsia() {
   return isWeb() ? false : Platform.isFuchsia;
+}
+
+/// Extra
+bool isMobile() {
+  if (isAndroid()) {
+    return true;
+  }
+  if (isIOS()) {
+    return true;
+  }
+  return false;
+}
+
+bool isDesktop() {
+  if (isWindows()) {
+    return true;
+  }
+  if (isMacOS()) {
+    return true;
+  }
+  if (isLinux()) {
+    return true;
+  }
+  return false;
 }
